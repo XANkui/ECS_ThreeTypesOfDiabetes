@@ -13,7 +13,7 @@ namespace ThreeTypesOfDiabetesGame
         private void Awake()
         {
             _contexts = Contexts.sharedInstance;
-            _systems = new GameFeature(_contexts).Add(new GameEventSystems(_contexts));
+            _systems = GetSystems(_contexts);
             new ServerManager(_contexts, this.transform);
         }
 
@@ -28,6 +28,12 @@ namespace ThreeTypesOfDiabetesGame
         {
             _systems.Execute();
             _systems.Cleanup();
+        }
+
+        private Systems GetSystems(Contexts contexts) { 
+            return new GameFeature(contexts)
+                .Add(new GameEventSystems(contexts))
+                .Add(new ClickSystem(contexts));
         }
     }
 }

@@ -8,10 +8,18 @@ using UnityEngine;
 /// </summary>
 namespace ThreeTypesOfDiabetesGame.Data
 {
-
-    public class CustomVector2 {
+    /// <summary>
+    /// 这个自定义的结构体做好使用 struct ，使用 class 会有莫名其妙的问题
+    /// </summary>
+    public struct CustomVector2 {
         public int x;
         public int y;
+        
+        public CustomVector2(int x, int y)
+        {
+            this.x = x;
+            this.y = y;
+        }
     }
 
 }

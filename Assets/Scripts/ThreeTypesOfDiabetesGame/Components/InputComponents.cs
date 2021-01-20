@@ -1,18 +1,31 @@
-﻿using System.Collections;
+﻿using Entitas;
+using Entitas.CodeGeneration.Attributes;
+using System.Collections;
 using System.Collections.Generic;
+using ThreeTypesOfDiabetesGame.Data;
 using UnityEngine;
 
-public class InputComponents : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+namespace ThreeTypesOfDiabetesGame {
+
+    /// <summary>
+    /// 点击组件
+    /// Unique 只有一个
+    /// </summary>
+    [Input,Unique]
+    public class ClickComponent : IComponent {
+        public int x;
+        public int y;
     }
 
-    // Update is called once per frame
-    void Update()
+    /// <summary>
+    /// 滑动组件
+    /// Unique 只有一个
+    /// </summary>
+    [Input, Unique]
+    public class SlideComponent : IComponent
     {
-        
+        public CustomVector2 clickPos;
+        public SlideDirection direction;
     }
+
 }

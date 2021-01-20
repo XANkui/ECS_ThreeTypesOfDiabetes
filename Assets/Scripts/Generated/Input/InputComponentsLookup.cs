@@ -9,14 +9,20 @@
 public static class InputComponentsLookup {
 
     public const int InteractionDemoMouse = 0;
+    public const int ThreeTypesOfDiabetesGameClick = 1;
+    public const int ThreeTypesOfDiabetesGameSlide = 2;
 
-    public const int TotalComponents = 1;
+    public const int TotalComponents = 3;
 
     public static readonly string[] componentNames = {
-        "InteractionDemoMouse"
+        "InteractionDemoMouse",
+        "ThreeTypesOfDiabetesGameClick",
+        "ThreeTypesOfDiabetesGameSlide"
     };
 
     public static readonly System.Type[] componentTypes = {
-        typeof(InteractionDemo.MouseComponent)
+        typeof(InteractionDemo.MouseComponent),
+        typeof(ThreeTypesOfDiabetesGame.ClickComponent),
+        typeof(ThreeTypesOfDiabetesGame.SlideComponent)
     };
 }

@@ -44,12 +44,12 @@ namespace ThreeTypesOfDiabetesGame
         public void Initialize()
         {
             GameBoardComponent gameBoard = CreatorServer.Instance.CreateGameBoard().threeTypesOfDiabetesGameGameBoard;
-
+            CustomVector2 index = new CustomVector2();
             for (int x = 0; x < gameBoard.columns; x++)
             {
                 for (int y = 0; y < gameBoard.rows; y++)
                 {
-                    CustomVector2 index = new CustomVector2();
+                    
 
                     index.x = x;
                     index.y = y;

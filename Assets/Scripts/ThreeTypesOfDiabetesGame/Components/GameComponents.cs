@@ -9,8 +9,9 @@ namespace ThreeTypesOfDiabetesGame {
 
     /// <summary>
     /// 游戏面板
+    /// Unique 全局唯一（具有单例属性），并能单例获得
     /// </summary>
-    [Game]
+    [Game,Unique]
     public class GameBoardComponent : IComponent {
         /// <summary>
         /// 行

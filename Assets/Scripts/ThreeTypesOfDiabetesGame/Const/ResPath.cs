@@ -26,5 +26,7 @@ namespace ThreeTypesOfDiabetesGame
 
         public static readonly string ConfigPath = Application.streamingAssetsPath+ "/Config/";
         public static readonly string DataPath = ConfigPath+ "Data.json";
+
+        public static readonly string AudioPath = "Audio/";
     }
 }

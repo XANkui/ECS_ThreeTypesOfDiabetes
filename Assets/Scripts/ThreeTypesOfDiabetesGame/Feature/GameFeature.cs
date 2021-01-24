@@ -24,6 +24,9 @@ namespace ThreeTypesOfDiabetesGame
             Add(new EliminateVerticalSystem(contexts));
             Add(new EliminateExplodeSystem(contexts));
             Add(new ScoreSystem(contexts));
+            Add(new EliminateAudioSystem(contexts));
+            Add(new ExchangeAudioSystem(contexts));
+            Add(new FallAudioSystem(contexts));
 
         }
     }

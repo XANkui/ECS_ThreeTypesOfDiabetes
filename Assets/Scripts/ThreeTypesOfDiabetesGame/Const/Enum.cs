@@ -50,4 +50,24 @@ namespace ThreeTypesOfDiabetesGame
         /// </summary>
         EXPLODE
     }
+
+    /// <summary>
+    /// 音效名称
+    /// </summary>
+    public enum AudioName
+    {
+        Bg,
+        Fall,
+        NormalBomb,
+        SpecialBomb,
+        Switch
+    }
+
+    /// <summary>
+    /// 元素下落状态
+    /// </summary>
+    public enum FallState { 
+        STEADY,
+        FALL
+    }
 }

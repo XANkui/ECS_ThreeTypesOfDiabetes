@@ -22,6 +22,9 @@ namespace ThreeTypesOfDiabetesGame
             _gameEntity.AddThreeTypesOfDiabetesGameLoadSpriteListener(this);
 
             transform.position = new Vector3(_gameEntity.threeTypesOfDiabetesGameItemIndex.index.x, Contexts.sharedInstance.game.threeTypesOfDiabetesGameGameBoard.rows);
+
+            IView audioView = gameObject.AddComponent<AudioView>();
+            audioView.Link(entity,context);
         }
 
         public void OnThreeTypesOfDiabetesGameItemIndex(GameEntity entity, CustomVector2 index)

@@ -156,5 +156,25 @@ namespace ThreeTypesOfDiabetesGame {
         // 分数
         public int score;
     }
+
+    /// <summary>
+    /// 音效组件
+    /// </summary>
+    [Game, Event(EventTarget.Self)]
+    public class Audio : IComponent
+    {
+        // 音效路径
+        public string path;
+    }
+
+    /// <summary>
+    /// 下落状态组件
+    /// </summary>
+    [Game]
+    public class Fall : IComponent
+    {
+        // 音效路径
+        public FallState state;
+    }
 }
 

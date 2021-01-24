@@ -25,6 +25,7 @@ namespace ThreeTypesOfDiabetesGame
         {
             foreach (GameEntity entity in entities)
             {
+                entity.ReplaceThreeTypesOfDiabetesGameFall(FallState.STEADY);
                 entity.isThreeTypesOfDiabetesGameGetSameColor = true;
                 entity.isThreeTypesOfDiabetesGameMoveComplete = false;
             }

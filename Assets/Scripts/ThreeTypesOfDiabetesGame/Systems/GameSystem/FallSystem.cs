@@ -66,6 +66,7 @@ namespace ThreeTypesOfDiabetesGame
             if (newRow < entity.threeTypesOfDiabetesGameItemIndex.index.y)
             {
                 Debug.Log(GetType()+ "/MoveDown() newRow < entity.threeTypesOfDiabetesGameItemIndex.index.y/……");
+                entity.ReplaceThreeTypesOfDiabetesGameFall(FallState.FALL);
                 entity.ReplaceThreeTypesOfDiabetesGameItemIndex(new CustomVector2(entity.threeTypesOfDiabetesGameItemIndex.index.x,newRow));
             }
         }

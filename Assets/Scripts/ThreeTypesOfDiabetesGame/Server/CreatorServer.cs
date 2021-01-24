@@ -60,6 +60,7 @@ namespace ThreeTypesOfDiabetesGame
             GameEntity entity = _contexts.game.CreateEntity();
             entity.isThreeTypesOfDiabetesGameGameBoardItem = true;
             entity.isThreeTypesOfDiabetesGameMovableCommponent = true;
+            entity.ReplaceThreeTypesOfDiabetesGameFall(FallState.FALL);
             entity.AddThreeTypesOfDiabetesGameItemIndex(new CustomVector2(x,y));
             entity.AddThreeTypesOfDiabetesGameLoadPrefabCommponent(ResPath.PrefabPath+"Item"+nameIndex);
             entity.AddThreeTypesOfDiabetesGameItemEffectState(ItemEffectName.NONE);

@@ -12,6 +12,7 @@ public sealed class GameEventSystems : Feature {
         Add(new ThreeTypesOfDiabetesGameDestroyCommponentEventSystem(contexts)); // priority: 0
         Add(new ThreeTypesOfDiabetesGameAnyLoadPrefabCommponentEventSystem(contexts)); // priority: 0
         Add(new ThreeTypesOfDiabetesGameLoadSpriteEventSystem(contexts)); // priority: 0
+        Add(new ThreeTypesOfDiabetesGameAnyScoreEventSystem(contexts)); // priority: 0
         Add(new ThreeTypesOfDiabetesGameItemIndexEventSystem(contexts)); // priority: 1
     }
 }

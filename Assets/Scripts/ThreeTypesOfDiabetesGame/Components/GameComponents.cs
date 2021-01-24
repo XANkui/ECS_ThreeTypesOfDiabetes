@@ -146,5 +146,15 @@ namespace ThreeTypesOfDiabetesGame {
         // 图片名称
         public string name;
     }
+
+    /// <summary>
+    /// 分数组件
+    /// </summary>
+    [Game, Unique, Event(EventTarget.Any)]
+    public class Score : IComponent
+    {
+        // 分数
+        public int score;
+    }
 }
 

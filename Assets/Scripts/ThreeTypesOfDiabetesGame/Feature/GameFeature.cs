@@ -23,6 +23,7 @@ namespace ThreeTypesOfDiabetesGame
             Add(new EliminateHorizontalSystem(contexts));
             Add(new EliminateVerticalSystem(contexts));
             Add(new EliminateExplodeSystem(contexts));
+            Add(new ScoreSystem(contexts));
 
         }
     }

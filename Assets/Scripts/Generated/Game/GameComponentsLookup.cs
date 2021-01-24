@@ -29,12 +29,14 @@ public static class GameComponentsLookup {
     public const int ThreeTypesOfDiabetesGameLoadSprite = 18;
     public const int ThreeTypesOfDiabetesGameMovableCommponent = 19;
     public const int ThreeTypesOfDiabetesGameMoveComplete = 20;
-    public const int ThreeTypesOfDiabetesGameAnyLoadPrefabCommponentListener = 21;
-    public const int ThreeTypesOfDiabetesGameDestroyCommponentListener = 22;
-    public const int ThreeTypesOfDiabetesGameItemIndexListener = 23;
-    public const int ThreeTypesOfDiabetesGameLoadSpriteListener = 24;
+    public const int ThreeTypesOfDiabetesGameScore = 21;
+    public const int ThreeTypesOfDiabetesGameAnyLoadPrefabCommponentListener = 22;
+    public const int ThreeTypesOfDiabetesGameAnyScoreListener = 23;
+    public const int ThreeTypesOfDiabetesGameDestroyCommponentListener = 24;
+    public const int ThreeTypesOfDiabetesGameItemIndexListener = 25;
+    public const int ThreeTypesOfDiabetesGameLoadSpriteListener = 26;
 
-    public const int TotalComponents = 25;
+    public const int TotalComponents = 27;
 
     public static readonly string[] componentNames = {
         "HelloECS",
@@ -58,7 +60,9 @@ public static class GameComponentsLookup {
         "ThreeTypesOfDiabetesGameLoadSprite",
         "ThreeTypesOfDiabetesGameMovableCommponent",
         "ThreeTypesOfDiabetesGameMoveComplete",
+        "ThreeTypesOfDiabetesGameScore",
         "ThreeTypesOfDiabetesGameAnyLoadPrefabCommponentListener",
+        "ThreeTypesOfDiabetesGameAnyScoreListener",
         "ThreeTypesOfDiabetesGameDestroyCommponentListener",
         "ThreeTypesOfDiabetesGameItemIndexListener",
         "ThreeTypesOfDiabetesGameLoadSpriteListener"
@@ -86,7 +90,9 @@ public static class GameComponentsLookup {
         typeof(ThreeTypesOfDiabetesGame.LoadSprite),
         typeof(ThreeTypesOfDiabetesGame.MovableCommponent),
         typeof(ThreeTypesOfDiabetesGame.MoveComplete),
+        typeof(ThreeTypesOfDiabetesGame.Score),
         typeof(ThreeTypesOfDiabetesGameAnyLoadPrefabCommponentListenerComponent),
+        typeof(ThreeTypesOfDiabetesGameAnyScoreListenerComponent),
         typeof(ThreeTypesOfDiabetesGameDestroyCommponentListenerComponent),
         typeof(ThreeTypesOfDiabetesGameItemIndexListenerComponent),
         typeof(ThreeTypesOfDiabetesGameLoadSpriteListenerComponent)

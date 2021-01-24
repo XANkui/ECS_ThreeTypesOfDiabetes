@@ -37,12 +37,13 @@ namespace ThreeTypesOfDiabetesGame
             return entity;
         }
 
-        public GameEntity CreateBall(CustomVector2 index) {
+        public GameEntity CreateRandomBall(CustomVector2 index) {
             GameEntity entity = _contexts.game.CreateEntity();
             entity.isThreeTypesOfDiabetesGameGameBoardItem = true;
             entity.isThreeTypesOfDiabetesGameMovableCommponent = true;
             entity.AddThreeTypesOfDiabetesGameItemIndex(index);
             entity.AddThreeTypesOfDiabetesGameLoadPrefabCommponent(RandomPathServer.RandomPath());
+            entity.AddThreeTypesOfDiabetesGameItemEffectState(ItemEffectName.NONE);
             return entity;
         }
 
@@ -52,6 +53,16 @@ namespace ThreeTypesOfDiabetesGame
             entity.isThreeTypesOfDiabetesGameMovableCommponent = false;
             entity.AddThreeTypesOfDiabetesGameItemIndex(index);
             entity.AddThreeTypesOfDiabetesGameLoadPrefabCommponent(ResPath.BlockerPath);
+            return entity;
+        }
+
+        public GameEntity CreateBall(int nameIndex,int x, int y) {
+            GameEntity entity = _contexts.game.CreateEntity();
+            entity.isThreeTypesOfDiabetesGameGameBoardItem = true;
+            entity.isThreeTypesOfDiabetesGameMovableCommponent = true;
+            entity.AddThreeTypesOfDiabetesGameItemIndex(new CustomVector2(x,y));
+            entity.AddThreeTypesOfDiabetesGameLoadPrefabCommponent(ResPath.PrefabPath+"Item"+nameIndex);
+            entity.AddThreeTypesOfDiabetesGameItemEffectState(ItemEffectName.NONE);
             return entity;
         }
     }

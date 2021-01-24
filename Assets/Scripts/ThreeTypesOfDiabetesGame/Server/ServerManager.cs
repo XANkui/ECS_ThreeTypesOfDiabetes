@@ -14,6 +14,7 @@ namespace ThreeTypesOfDiabetesGame
         public ServerManager(Contexts contexts, Transform gameController) {
             LoadPrefabServer.Instance.Init(contexts, gameController);
             CreatorServer.Instance.Init(contexts);
+            GetEmptyItemServer.Instance.Init(contexts);
         }
     }
 }

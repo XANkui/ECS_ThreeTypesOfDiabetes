@@ -16,16 +16,25 @@ public static class GameComponentsLookup {
     public const int InteractionDemoSprite = 5;
     public const int InteractionDemoView = 6;
     public const int ThreeTypesOfDiabetesGameDestroyCommponent = 7;
-    public const int ThreeTypesOfDiabetesGameGameBoard = 8;
-    public const int ThreeTypesOfDiabetesGameGameBoardItem = 9;
-    public const int ThreeTypesOfDiabetesGameItemIndex = 10;
-    public const int ThreeTypesOfDiabetesGameLoadPrefabCommponent = 11;
-    public const int ThreeTypesOfDiabetesGameMovableCommponent = 12;
-    public const int ThreeTypesOfDiabetesGameAnyLoadPrefabCommponentListener = 13;
-    public const int ThreeTypesOfDiabetesGameDestroyCommponentListener = 14;
-    public const int ThreeTypesOfDiabetesGameItemIndexListener = 15;
+    public const int ThreeTypesOfDiabetesGameDetectionSameItem = 8;
+    public const int ThreeTypesOfDiabetesGameElimainate = 9;
+    public const int ThreeTypesOfDiabetesGameExchange = 10;
+    public const int ThreeTypesOfDiabetesGameGameBoard = 11;
+    public const int ThreeTypesOfDiabetesGameGameBoardItem = 12;
+    public const int ThreeTypesOfDiabetesGameGetSameColor = 13;
+    public const int ThreeTypesOfDiabetesGameItemEffectState = 14;
+    public const int ThreeTypesOfDiabetesGameItemIndex = 15;
+    public const int ThreeTypesOfDiabetesGameJudgeFormatiom = 16;
+    public const int ThreeTypesOfDiabetesGameLoadPrefabCommponent = 17;
+    public const int ThreeTypesOfDiabetesGameLoadSprite = 18;
+    public const int ThreeTypesOfDiabetesGameMovableCommponent = 19;
+    public const int ThreeTypesOfDiabetesGameMoveComplete = 20;
+    public const int ThreeTypesOfDiabetesGameAnyLoadPrefabCommponentListener = 21;
+    public const int ThreeTypesOfDiabetesGameDestroyCommponentListener = 22;
+    public const int ThreeTypesOfDiabetesGameItemIndexListener = 23;
+    public const int ThreeTypesOfDiabetesGameLoadSpriteListener = 24;
 
-    public const int TotalComponents = 16;
+    public const int TotalComponents = 25;
 
     public static readonly string[] componentNames = {
         "HelloECS",
@@ -36,14 +45,23 @@ public static class GameComponentsLookup {
         "InteractionDemoSprite",
         "InteractionDemoView",
         "ThreeTypesOfDiabetesGameDestroyCommponent",
+        "ThreeTypesOfDiabetesGameDetectionSameItem",
+        "ThreeTypesOfDiabetesGameElimainate",
+        "ThreeTypesOfDiabetesGameExchange",
         "ThreeTypesOfDiabetesGameGameBoard",
         "ThreeTypesOfDiabetesGameGameBoardItem",
+        "ThreeTypesOfDiabetesGameGetSameColor",
+        "ThreeTypesOfDiabetesGameItemEffectState",
         "ThreeTypesOfDiabetesGameItemIndex",
+        "ThreeTypesOfDiabetesGameJudgeFormatiom",
         "ThreeTypesOfDiabetesGameLoadPrefabCommponent",
+        "ThreeTypesOfDiabetesGameLoadSprite",
         "ThreeTypesOfDiabetesGameMovableCommponent",
+        "ThreeTypesOfDiabetesGameMoveComplete",
         "ThreeTypesOfDiabetesGameAnyLoadPrefabCommponentListener",
         "ThreeTypesOfDiabetesGameDestroyCommponentListener",
-        "ThreeTypesOfDiabetesGameItemIndexListener"
+        "ThreeTypesOfDiabetesGameItemIndexListener",
+        "ThreeTypesOfDiabetesGameLoadSpriteListener"
     };
 
     public static readonly System.Type[] componentTypes = {
@@ -55,13 +73,22 @@ public static class GameComponentsLookup {
         typeof(InteractionDemo.SpriteComponent),
         typeof(InteractionDemo.ViewComponent),
         typeof(ThreeTypesOfDiabetesGame.DestroyCommponent),
+        typeof(ThreeTypesOfDiabetesGame.DetectionSameItem),
+        typeof(ThreeTypesOfDiabetesGame.Elimainate),
+        typeof(ThreeTypesOfDiabetesGame.ExchangeComponent),
         typeof(ThreeTypesOfDiabetesGame.GameBoardComponent),
         typeof(ThreeTypesOfDiabetesGame.GameBoardItemComponent),
+        typeof(ThreeTypesOfDiabetesGame.GetSameColor),
+        typeof(ThreeTypesOfDiabetesGame.ItemEffectState),
         typeof(ThreeTypesOfDiabetesGame.ItemIndex),
+        typeof(ThreeTypesOfDiabetesGame.JudgeFormatiom),
         typeof(ThreeTypesOfDiabetesGame.LoadPrefabCommponent),
+        typeof(ThreeTypesOfDiabetesGame.LoadSprite),
         typeof(ThreeTypesOfDiabetesGame.MovableCommponent),
+        typeof(ThreeTypesOfDiabetesGame.MoveComplete),
         typeof(ThreeTypesOfDiabetesGameAnyLoadPrefabCommponentListenerComponent),
         typeof(ThreeTypesOfDiabetesGameDestroyCommponentListenerComponent),
-        typeof(ThreeTypesOfDiabetesGameItemIndexListenerComponent)
+        typeof(ThreeTypesOfDiabetesGameItemIndexListenerComponent),
+        typeof(ThreeTypesOfDiabetesGameLoadSpriteListenerComponent)
     };
 }

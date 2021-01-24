@@ -8,6 +8,7 @@ namespace ThreeTypesOfDiabetesGame
     {
         public InputFeature(Contexts contexts) {
             Add(new ClickSystem(contexts));
+            Add(new SlideSystem(contexts));
         }
     }
 }

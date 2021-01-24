@@ -15,6 +15,7 @@ namespace ThreeTypesOfDiabetesGame
             _contexts = Contexts.sharedInstance;
             _systems = GetSystems(_contexts);
             new ServerManager(_contexts, this.transform);
+            ModelManager.Instance.Init();
         }
 
         // Start is called before the first frame update
@@ -33,7 +34,7 @@ namespace ThreeTypesOfDiabetesGame
         private Systems GetSystems(Contexts contexts) { 
             return new GameFeature(contexts)
                 .Add(new GameEventSystems(contexts))
-                .Add(new ClickSystem(contexts));
+                .Add(new InputFeature(contexts));
         }
     }
 }

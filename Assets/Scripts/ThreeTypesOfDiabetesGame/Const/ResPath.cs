@@ -18,5 +18,13 @@ namespace ThreeTypesOfDiabetesGame
         public static readonly string Item4Path = PrefabPath+ "Item4";
         public static readonly string Item5Path = PrefabPath+ "Item5";
 
+        public static readonly string SpritePath = "Sprites/";
+        public static readonly string AllPostfix = "_1";
+        public static readonly string HorizontalPostfix = "_1";
+        public static readonly string VertialPostfix = "_1";
+        public static readonly string ExplodePostfix = "_1";
+
+        public static readonly string ConfigPath = Application.streamingAssetsPath+ "/Config/";
+        public static readonly string DataPath = ConfigPath+ "Data.json";
     }
 }

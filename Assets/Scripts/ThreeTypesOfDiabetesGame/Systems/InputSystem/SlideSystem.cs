@@ -11,6 +11,7 @@ namespace ThreeTypesOfDiabetesGame
         Contexts _context;
         public SlideSystem(Contexts context) : base(context.input)
         {
+            Debug.Log(GetType() + "/SlideSystem()/ constructor ");
             _context = context;
         }
 
@@ -38,6 +39,8 @@ namespace ThreeTypesOfDiabetesGame
                     var nextPos = NextPos(entity);
                     _context.input.ReplaceThreeTypesOfDiabetesGameClick(nextPos.x, nextPos.y);
                 }
+
+                Debug.Log(GetType()+ "/Execute()/ slide Direction is "+ entity.threeTypesOfDiabetesGameSlide.direction.ToString());
             }
         }
 
@@ -54,10 +57,10 @@ namespace ThreeTypesOfDiabetesGame
                     x++;
                     break;
                 case SlideDirection.UP:
-                    y--;
+                    y++;
                     break;
                 case SlideDirection.DOWN:
-                    y++;
+                    y--;
                     break;
                 
             }

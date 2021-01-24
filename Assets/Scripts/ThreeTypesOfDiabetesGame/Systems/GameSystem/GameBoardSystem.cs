@@ -44,12 +44,23 @@ namespace ThreeTypesOfDiabetesGame
         public void Initialize()
         {
             GameBoardComponent gameBoard = CreatorServer.Instance.CreateGameBoard().threeTypesOfDiabetesGameGameBoard;
+
+
+            // 随机颜色球数据面板
+            //RandomColorGameBoardItems(gameBoard);
+
+            // 配置表中的球面板数据
+            JsonDataGameBoardItems(gameBoard);
+        }
+
+        // 随机颜色球面板数据
+        private void RandomColorGameBoardItems(GameBoardComponent gameBoard) {
             CustomVector2 index = new CustomVector2();
             for (int x = 0; x < gameBoard.columns; x++)
             {
                 for (int y = 0; y < gameBoard.rows; y++)
                 {
-                    
+
 
                     index.x = x;
                     index.y = y;
@@ -59,11 +70,44 @@ namespace ThreeTypesOfDiabetesGame
                     {
                         CreatorServer.Instance.CreateBlocker(index);
                     }
-                    else {
-                        CreatorServer.Instance.CreateBall(index);
+                    else
+                    {
+                        CreatorServer.Instance.CreateRandomBall(index);
                     }
                 }
             }
+        }
+
+
+        // 配置表中的球面板数据
+        private void JsonDataGameBoardItems(GameBoardComponent gameBoard) {
+            var list = GetJsonDataList();
+            for (int row = 0; row < gameBoard.rows; row++)
+            {
+                for (int index = 0; index < list[row].Count; index++)
+                {
+                    CreatorServer.Instance.CreateBall(list[row][index],index,row);
+                }
+            }
+        }
+
+        // 获取配置表中的球面板数据
+        private List<List<int>> GetJsonDataList() {
+
+            var model = ModelManager.Instance.DataModel.Level[0];
+
+            List<List<int>> list = new List<List<int>>();
+            list.Add(model.row_0);
+            list.Add(model.row_1);
+            list.Add(model.row_2);
+            list.Add(model.row_3);
+            list.Add(model.row_4);
+            list.Add(model.row_5);
+            list.Add(model.row_6);
+            list.Add(model.row_7);
+            list.Add(model.row_8);
+
+            return list;
         }
 
         /// <summary>

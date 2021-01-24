@@ -70,5 +70,81 @@ namespace ThreeTypesOfDiabetesGame {
     {
        
     }
+
+    /// <summary>
+    /// 球交换状态
+    /// </summary>
+    [Game]
+    public class ExchangeComponent : IComponent {
+        public ExchangeState exchangeState;
+    }
+
+    /// <summary>
+    /// 球移动是否完成
+    /// 没有参数，就会是默认 bool 
+    /// </summary>
+    [Game]
+    public class MoveComplete : IComponent
+    {
+    }
+
+    /// <summary>
+    /// 是否获取相同颜色球组件
+    /// 没有参数，就会是默认 bool 
+    /// </summary>
+    [Game]
+    public class GetSameColor : IComponent
+    {
+    }
+
+    /// <summary>
+    /// 是否获取相同颜色球组件
+    /// 没有参数，就会是默认 bool 
+    /// </summary>
+    [Game]
+    public class DetectionSameItem : IComponent {
+        public List<IEntity> _leftEntities;
+        public List<IEntity> _rightEntities;
+        public List<IEntity> _upEntities;
+        public List<IEntity> _downEntities;
+    }
+
+    /// <summary>
+    /// 判断队形是否满足生成特殊元素的条件
+    /// 没有参数，就会是默认 bool 
+    /// </summary>
+    [Game]
+    public class JudgeFormatiom : IComponent
+    {
+    }
+
+    /// <summary>
+    /// 标记是否可消除元素
+    /// 没有参数，就会是默认 bool (注意只有值变化的时候才触发事件，之前是false,再次设置false 是不会触发事件的)
+    /// 改造为自己带参数的
+    /// </summary>
+    [Game]
+    public class Elimainate : IComponent
+    {
+        public bool canElimainate;
+    }
+
+    /// <summary>
+    /// 生成的特效队形的标志组件
+    /// </summary>
+    [Game]
+    public class ItemEffectState : IComponent
+    {
+        public ItemEffectName state;
+    }
+
+    /// <summary>
+    /// 加载图片组件
+    /// </summary>
+    [Game,Event(EventTarget.Self)]
+    public class LoadSprite : IComponent {
+        // 图片名称
+        public string name;
+    }
 }
 

@@ -12,6 +12,7 @@ namespace ThreeTypesOfDiabetesGame
         ClickComponent _lastClickComponent;
         public ClickSystem(Contexts context) : base(context.input)
         {
+            Debug.Log(GetType() + "/ClickSystem()/ constructor ");
             _contexts = context;
         }
 
@@ -41,7 +42,7 @@ namespace ThreeTypesOfDiabetesGame
             {
                 if (_lastClickComponent == null)
                 {
-                    _lastClickComponent = click;
+                    _lastClickComponent = new ClickComponent();
                 }
                 else {
                     // 判断当前元素是都是上一个元素的上下左右四个元素之一
@@ -53,11 +54,28 @@ namespace ThreeTypesOfDiabetesGame
                     {
                         Debug.Log(GetType()+ "/Execute ()/ changeItem: " + click.x + ","+click.y);
                         // ToDO : 元素交换 
-
+                        ReplaceExchange(click);
+                        ReplaceExchange(_lastClickComponent);
                         _lastClickComponent = null;
                     }
-                    
+
+                   
                 }
+
+                if (_lastClickComponent != null)
+                {
+                    _lastClickComponent.x = click.x;
+                    _lastClickComponent.y = click.y;
+                }
+            }
+        }
+
+        // 设置交换球的状态
+        private void ReplaceExchange(ClickComponent click) {
+            var entities = _contexts.game.GetEntitiesWithThreeTypesOfDiabetesGameItemIndex(new CustomVector2(click.x, click.y));
+            foreach (GameEntity entity in entities)
+            {
+                entity.ReplaceThreeTypesOfDiabetesGameExchange(ExchangeState.START);
             }
         }
     }
